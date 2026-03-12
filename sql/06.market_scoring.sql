@@ -3,7 +3,7 @@ SELECT
     state_name,
     population,
     density,
-    ROUND(CAST(population * density AS numeric), 2) AS opportunity_score
+    ROUND((population / 1000.0) * density, 2) AS opportunity_score
 FROM city_demographics
 WHERE population IS NOT NULL
   AND density IS NOT NULL
