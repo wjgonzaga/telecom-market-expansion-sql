@@ -28,7 +28,7 @@ Telecom providers need to prioritize markets where infrastructure investment is 
 ## Scoring Logic
 The MVP opportunity score is based on:
 
-`population × density`
+`Opportunity Score = (Population / 1000) × Population Density'
 
 This serves as a simple proxy for:
 - market demand
