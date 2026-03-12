@@ -28,7 +28,11 @@ Telecom providers need to prioritize markets where infrastructure investment is 
 ## Scoring Logic
 The MVP opportunity score is based on:
 
-`Opportunity Score = (Population / 1000) × Population Density'
+`Opportunity Score = 
+( Population / 100,000 × 0.6 ) +
+( Population Density / 100 × 0.4 )'
+
+* Population and density are scaled and weighted to approximate both market demand and infrastructure deployment efficiency. Population is weighted more heavily to reflect the importance of total addressable market size.
 
 This serves as a simple proxy for:
 - market demand
@@ -48,13 +52,21 @@ While this simplified model focuses on demographic demand indicators, the result
 
 Future iterations of the model could incorporate additional variables such as broadband availability, competitive provider presence, and median income levels to produce a more comprehensive market prioritization framework.
 
-Example output (top markets by opportunity score):
+## Example output (top markets by opportunity score):
 
-|    City     | State | Population | Density | Opportunity Score |
-|-------------|-------|------------|---------|-------------------|
-| New York    | NY    | 8,622,698  | 28,188  | 243019412024      |
-| Los Angeles | CA    | 3,990,456  | 8,484   | 33854428704       |
-| Chicago     | IL    | 2,705,994  | 11,883  | 32150301802       |
+| Rank | City          | State | Population | Density | Opportunity 
+| ---- | ------------- | ----- | ---------- | ------- | ------------ |
+| 1    | New York      | NY    | 8,622,698  | 28,188  | 63.45        |
+| 2    | Los Angeles   | CA    | 3,990,456  | 8,484   | 27.37        |
+| 3    | Chicago       | IL    | 2,705,994  | 11,883  | 22.81        |
+| 4    | Philadelphia  | PA    | 1,584,138  | 11,379  | 17.43        |
+| 5    | Boston        | MA    | 694,583    | 13,841  | 12.99        |
+| 6    | San Francisco | CA    | 883,305    | 18,679  | 15.68        |
+| 7    | Washington    | DC    | 702,455    | 11,850  | 12.01        |
+| 8    | Seattle       | WA    | 744,955    | 8,358   | 10.95        |
+| 9    | Miami         | FL    | 470,914    | 13,468  | 9.56         |
+| 10   | Atlanta       | GA    | 498,044    | 3,685   | 5.20         |
+
 
 ## Future Enhancements
 - Load and execute analysis in PostgreSQL
