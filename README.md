@@ -46,11 +46,13 @@ Cities with both high population and high density represent stronger candidates 
 
 The SQL analysis produced a ranked list of U.S. cities based on an opportunity score derived from population and population density. These variables serve as proxies for potential customer demand and infrastructure deployment efficiency.
 
-The results highlight that large, densely populated metropolitan areas consistently rank highest in expansion potential. Cities such as New York, Chicago, Philadelphia, and Boston emerge as strong candidates due to their combination of high population and concentrated geographic demand.
+The results highlight that large, densely populated metropolitan areas consistently rank highest in expansion potential. Cities such as New York, Los Angeles, Chicago, and Philadelphia emerge as strong candidates due to their combination of high population and concentrated geographic demand.
 
 While this simplified model focuses on demographic demand indicators, the results demonstrate how SQL-based analytics can support early-stage telecom infrastructure planning by identifying markets with favorable demand characteristics.
 
 Future iterations of the model could incorporate additional variables such as broadband availability, competitive provider presence, and median income levels to produce a more comprehensive market prioritization framework.
+
+See `docs/sample_output.md` for an example ranked output table from the scoring model.
 
 ## Example output (top markets by opportunity score):
 
@@ -60,12 +62,12 @@ Future iterations of the model could incorporate additional variables such as br
 | 2    | Los Angeles   | CA    | 3,990,456  | 8,484   | 27.37        |
 | 3    | Chicago       | IL    | 2,705,994  | 11,883  | 22.81        |
 | 4    | Philadelphia  | PA    | 1,584,138  | 11,379  | 17.43        |
-| 5    | Boston        | MA    | 694,583    | 13,841  | 12.99        |
-| 6    | San Francisco | CA    | 883,305    | 18,679  | 15.68        |
-| 7    | Washington    | DC    | 702,455    | 11,850  | 12.01        |
-| 8    | Seattle       | WA    | 744,955    | 8,358   | 10.95        |
-| 9    | Miami         | FL    | 470,914    | 13,468  | 9.56         |
-| 10   | Atlanta       | GA    | 498,044    | 3,685   | 5.20         |
+| 5    | San Francisco | CA    | 883,305    | 18,679  | 12.76        |
+| 6    | Boston        | MA    | 694,583    | 13,841  | 9.72         |
+| 7    | Washington    | DC    | 702,455    | 11,850  | 8.96         |
+| 8    | Seattle       | WA    | 744,955    | 8,358   | 7.81         |
+| 9    | Miami         | FL    | 470,914    | 13,468  | 8.22         |
+| 10   | Atlanta       | GA    | 498,044    | 3,685   | 4.46         |
 
 
 ## Future Enhancements

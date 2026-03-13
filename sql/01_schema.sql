@@ -1,3 +1,6 @@
+
+-- Core analytical table for city-level demographic data
+
 CREATE TABLE city_demographics (
     city VARCHAR(100),
     state_id VARCHAR(10),
