@@ -69,9 +69,12 @@ See `docs/sample_output.md` for an example ranked output table from the scoring 
 | 9    | Miami         | FL    | 470,914    | 13,468  | 8.22         |
 | 10   | Atlanta       | GA    | 498,044    | 3,685   | 4.46         |
 
+## Dashboard Visualization
+
+![Telecom Expansion Dashboard](visuals/telecom_expansion_dashboard.png)
+
 
 ## Future Enhancements
 - Load and execute analysis in PostgreSQL
 - Add broadband availability data
 - Add competition and income indicators
-- Build a Power BI dashboard for market visualization
